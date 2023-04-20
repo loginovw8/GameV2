@@ -1,0 +1,16 @@
+<%- include('../particles/header.ejs') %>
+
+<%- include('../particles/navigation.ejs') %>
+<div class="content">
+    <form action="/create_categorie" method="post">
+        <div class="form-group">
+            <label class="form-group__label" for="categorie">categorie</label>
+            <input class="form-group__input" type="text" id="categorie" name="categorie" placeholder="categorie" required>
+        </div>
+    
+        <input class="form-button" type="submit" value="Create">
+    </form>
+</div>
+
+
+<%- include('../particles/footer.ejs') %>

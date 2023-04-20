@@ -1,0 +1,470 @@
+body {
+  background-color: #ffffff;
+  padding: 0%;
+  margin: 0%;
+}
+
+html {
+  display: block;
+  padding: 0%;
+  margin: 0%;
+}
+
+a {
+  text-decoration: none;
+  letter-spacing: .10em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.content {
+  max-width: 1536px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.homePage {
+  background-color: #c5c5c5;
+  max-width: 1536px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.content-plays {
+  display: grid;
+  max-width: 1536px;
+  margin: 0 auto;
+  min-height: 100vh;
+  grid-template-columns: auto auto auto auto;
+}
+
+.rightSide {
+  margin-top: 27px;
+  float: right
+}
+
+.create__form {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  text-align: center;
+  margin-top: 50px;
+}
+
+.create__text {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: grey;
+  border-color: blueviolet;
+  border-radius: 30px;
+  border: 4px;
+  text-align: center;
+}
+
+.crate__categorie {
+  align-items: center;
+  vertical-align: middle;
+  /* position: relative; */
+  width: 500px;
+  height: 500px;
+  background-color: grey;
+  border-color: blueviolet;
+  border-radius: 30px;
+  border: 4px;
+  text-align: center;
+}
+
+.categoryOfCreate{
+  text-align: left;
+}
+
+.box{
+  display: inline-block;
+  width: 150px;
+  height: auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.item__form {
+  /* background-color: ; */
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* HEADER */
+.header__search {
+  display: inline-block;
+  border-radius: 7px;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.header__buttonUsers {
+  text-decoration: none;
+  font-size: 25px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border: 2px;
+  border-radius: 3px;
+  /* margin-left:300px; */
+  background-color: gray;
+}
+
+.header__buttonLog {
+  text-decoration: none;
+  margin-left: 15px;
+  background-color: gray;
+  font-size: 25px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border: 2px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.header__buttonRegLog:hover {
+  text-decoration: none;
+  background-color: lightgrey;
+}
+
+.header_buttonRL1 {
+  color: darkviolet;
+  position: relative;
+  float: right;
+  font-size: 25px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border: 2px;
+  border-radius: 3px;
+  padding-right: 30px;
+}
+
+.header_buttonRL2 {
+  margin-top: 27px;
+  color: darkviolet;
+  position: relative;
+  float: right;
+  font-size: 25px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border: 2px;
+  border-radius: 3px;
+  padding-right: 30px;
+}
+
+.header {
+  padding-left: 10px;
+  width: auto;
+  display: block;
+  background-color: black;
+}
+
+.header__name {
+  display: inline-block;
+}
+
+.header__button {
+  text-decoration: none;
+  margin-left: 100px;
+  display: inline-block;
+  font-size: 25px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border: 2px;
+  border-radius: 3px;
+  border-color: darkviolet;
+  background-color: grey;
+}
+
+.header__button-p {
+  text-decoration: none;
+  margin-left: 100px;
+  display: inline-block;
+  font-size: 25px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border: 2px;
+  border-radius: 3px;
+  border-color: darkviolet;
+  background-color: grey;
+}
+
+.header__button:hover {
+  text-decoration: none;
+  background-color: lightgrey;
+}
+
+
+/* USERS */
+.userView {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(163, 154, 154);
+  margin: 15px;
+  padding: 10px;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* .userView {
+  position: relative;
+  margin: 10px;
+  display: block;
+} */
+
+.deleteUser {
+  margin-top: 10px;
+  border-radius: 10px;
+  color: rgb(218, 27, 27);
+  float: right;
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* DROPDOWN */
+
+.dropdown__title {
+  
+  border-radius: 0px 0px 10px 0px;
+  background-color: #afafaf;
+  color: rgb(83,55,122);
+  padding: 16px;
+  font-size: 30px;
+  font-weight: 900;
+  border: none;
+}
+
+.dropdown {
+
+  position: absolute;
+  display: inline-block;
+}
+
+.dropdown-content {
+
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 1px;
+  float: right;
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown__item{
+  margin: 5px;
+  background-color: darkgrey;
+  font-size: 17px;
+  display:block;
+  position: relative;
+}
+
+/* CATEGORIES */
+.Categories {
+  text-align: center;
+  padding: 3px;
+}
+
+.category__button {
+  margin-top: 10px;
+  background-color: grey;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.category__button:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+
+/* COMMENTARIES */
+.comment {
+
+  background-color: lightgrey;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.comments {
+  font-size: large;
+}
+
+.userName {
+  padding-top: 4px;
+  font-size: 13px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.date {
+  font-size: 13px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  padding-bottom: 4px;
+}
+
+/* SECTION */
+.image {
+  width: 200px;
+  height: 300px;
+}
+
+.section:hover{
+  box-shadow:  0px 5px 10px 0px rgba(0, 0, 0, 1);;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.section {
+  color: white;
+  width: 300px;
+  height: 400px;
+  margin: 15px;
+  text-align: center;
+  padding: 20px;
+  display: inline-block;
+  border: 2px solid rgb(228, 228, 228);
+  background-color: rgb(241, 241, 241);
+}
+
+.section__image {
+  border-radius: 8px;
+  width: 80%;
+  height: 80%;
+}
+
+.section__title {
+  display: block;
+  margin-top: 0;
+  text-align: center;
+}
+
+/* FORM-GROUP */
+.form-group {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.form-group__label {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.form-group__input {
+  padding: 7px;
+}
+
+.form-button:hover {
+  text-decoration: none;
+  background-color: darkgrey;
+}
+
+.form-button {
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 5px;
+  display: inline-block;
+  color: white;
+  padding: 7px;
+  margin-top: 5px;
+  background-color: grey;
+}
+
+.form-button:hover {
+  cursor: pointer;
+}
+
+/* REGISTRATION AND LOGIN */
+.form-auth-center {
+  text-align: center;
+}
+
+.form__center {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  text-align: center;
+  margin-top: 50px;
+}
+
+.fromRegistrationAndAuth {
+  font-size: 25px;
+  width: 500px;
+  height: 500px;
+  border-radius: 30px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  background-color: grey;
+}
+
+.form__registration {
+  text-align: center;
+}
+
+.Page {
+  display: inline-block;
+  border-radius: 5px;
+  border-width: medium;
+  color: black;
+  background-color: gray;
+  font-size: xx-large;
+  padding: 10px;
+}
+
+.Page:hover {
+  background-color: lightblue;
+  color: grey;
+}
+
+.PageLine {
+  text-align: center;
+}
+
+/* ITEM_SHOW */
+.item {
+  display: inline-block;
+  text-align: center;
+  padding-left: 300px;
+}
+
+.description {
+  text-align: center;
+  text-align: justify;
+  display: inline-block;
+  width: 40%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  position: absolute;
+}
+
+.form-item {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.Newest{
+  display: block;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.Newest__box{
+  background-color: rgb(172, 172, 172);
+  position: relative;
+  border-radius: 25px;
+  /* padding-top: 25px; */
+  padding: 13px;
+  /* padding-bottom: 25px; */
+}

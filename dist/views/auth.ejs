@@ -1,0 +1,66 @@
+<%- include('./particles/header.ejs') %>
+
+<%- include('./particles/navigation.ejs') %>
+<div class="content">
+    <form class="form__center" action="/login" method="post">
+        <!-- <div class="fromRegistrationAndAuth">
+            <h2>Вход</h2>
+    
+            <div class="form-group">
+                <input class="form-group__input" type="text" id="name" name="name" placeholder="Введите Имя" required>
+            </div>
+        
+            <div class="form-group">
+                <input class="form-group__input" id="password" name="password" type="password" placeholder="Введите Пароль" required>
+            </div>
+    
+            <button class="form-button">Войти</button>
+    
+            <div>
+                <h3>Ещё нету аккаунта? - <a href="/registration">Зарегистрироваться</a></h3>
+            </div>
+        </div> -->
+        
+
+
+        <div class="form">
+      
+            <ul class="tab-group">
+              <li class="tab"><a href="/registration">Зарегистрироваться</a></li>
+              <li class="tab active"><a href="/auth">Войти</a></li>
+            </ul>
+              <div id="login">   
+                <h1>С возвращением!</h1>
+                
+                <form action="/" method="post">
+                
+                  <div class="field-wrap">
+                  <label>
+                    Email Адрес
+                  </label>
+                  <input type="email"required autocomplete="off"/>
+                </div>
+                
+                <div class="field-wrap">
+                  <label>
+                    Пароль
+                  </label>
+                  <input type="password"required autocomplete="off"/>
+                </div>
+                
+                <button class="button button-block">Войти</button>
+                
+                </form>
+      
+              </div>
+              
+            </div><!-- tab-content -->
+            
+      </div> <!-- /form -->
+
+
+    </form>
+</div>
+
+
+<%- include('./particles/footer.ejs') %>

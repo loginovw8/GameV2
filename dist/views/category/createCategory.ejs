@@ -1,0 +1,17 @@
+<%- include('../particles/header.ejs') %>
+
+<%- include('../particles/navigation.ejs') %>
+<div class="content">
+<form class="create__form" action="/store_category" method="post">
+    <div class="crate__categorie">
+        <h2>Создание Категории</h2>
+                <div class="form-group">
+                    <label class="form-group__label" for="title">Название</label>
+                    <input class="form-group__input" type="text" id="title" name="title" placeholder="Введите Название Категории">
+                </div>
+
+        <input class="form-button" type="submit" value="Create">
+    </div>
+</form>
+</div>
+<%- include('../particles/footer.ejs') %>

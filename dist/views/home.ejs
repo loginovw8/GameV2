@@ -1,0 +1,101 @@
+<%- include('particles/header.ejs') %>
+
+<%- include('particles/navigation.ejs') %>
+
+
+<div class="homePage">
+  <!-- SLIDER -->
+  <div class="slider">
+
+    <div class="sliders__pictures">
+      <div class="slider__wrapper">
+
+        <div class="slider__item"><img class="slider__image" src="/img/ghost.webp"></div>
+        <div class="slider__item"><img class="slider__image" src="/img/FC5.jpg"></div>
+        <div class="slider__item"><img class="slider__image" src="/img/HogwartsLeg.jpg"></div>
+        <div class="slider__item"><img class="slider__image" src="/img/"></div>
+        <div class="slider__item"><img class="slider__image" src="/img/"></div>
+
+      </div>
+
+    </div>
+
+    <button class="slider__control slider__control--l" id="right"><%- include('icons/leftBtn.ejs') %></button>
+    <button class="slider__control slider__control--r" id="left"><%- include('icons/RightBtn.ejs') %></button>
+
+  </div>
+
+  <!-- TOP 4 -->
+
+  <h2 class="Newest">Новинки</h2>
+<div class="Newest__box">
+  <% for (let i = 0; i < items.length; i++) { %>
+    <% if (auth) { %>
+    <div class="section card">
+      <a href="/items/<%= items[i].id %>/show">
+        <h2 class="section__title">
+          <%= items[i].title %>
+        </h2>
+        <img class="section__image" src="/img/<%= items[i].image %>">
+      </a>
+      <form class="button_delete" method="post" action="/items/delete">
+        <input type="hidden" value="<%= items[i].id %>" name="id">
+        <input class="form-button" type="submit" value="Удалить">
+      </form>
+    </div>
+    <% } else { %>
+    <div class="section card">
+      <a href="/items/<%= items[i].id %>/show">
+        <h2 class="section__title">
+          <%= items[i].title %>
+        </h2>
+        <img class="section__image" src="/img/<%= items[i].image %>">
+      </a>
+    </div>
+    <% } %>
+
+    <% } %>
+</div>
+    
+
+
+</div>
+
+<script>
+  let maxWidth = 1400;
+  let itemsCount = 2;
+  console.log(document.documentElement.clientWidth)
+  addEventListener('resize', () => {
+    if (document.documentElement.clientWidth < 760) {
+      document.querySelector(".sliders__pictures").style.width = "450px"
+    }
+  })
+  const sliders = document.querySelectorAll(".sliders__pictures")
+  sliders.forEach(slider => {
+    let currentIndex = 0;
+    let currentMargin = 0;
+    const sliderWrapper = slider.querySelector(".slider__wrapper")
+    const items = sliderWrapper.querySelectorAll(".slider__item")
+    items.forEach(items => {
+      items.style.width = maxWidth / itemsCount + 'px';
+    })
+    sliderWrapper.style.width = maxWidth / itemsCount + items.length + 'px';
+    const LeftBtn = document.querySelector(".slider__control--l")
+    const RightBtn = document.querySelector(".slider__control--r")
+    RightBtn.addEventListener('click', () => {
+      if (currentIndex < 3) {
+        currentIndex++;
+        currentMargin = currentMargin - 700;
+        sliderWrapper.style.marginLeft = currentMargin + 'px';
+      }
+    })
+    LeftBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        currentMargin = currentMargin + 700;
+        sliderWrapper.style.marginLeft = currentMargin + 'px';
+      }
+    })
+  })
+</script>
+<%- include('particles/footer.ejs') %>

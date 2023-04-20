@@ -1,0 +1,90 @@
+<div class="header">
+  <h1 class="header__name"><a href="/">Главная</a></h1>
+  <button class="header__button-p"><a href="/items">Игры</a></button>
+  <% if (auth && admin) { %>
+  <div class="dropdown hidden">
+    <span class="dropdownName">Меню</span>
+    <div class="dropdown-content">
+
+      <span class="menu-item"><button><a href="/items/create">Создать лесби тусу</a></button></span>
+      <span class="menu-item"><button><a href="/categorie/store">Создать гей тусу</a></button></span>
+      <span class="menu-item"><button><a href="/users">Неформалы</a></button></span>
+      <% if (auth) { %>
+      <span class="menu-item"><button><a href="/logout">Стать натуралом</a></button></span>
+      <% }else { %>
+      <span class="menu-item"><button><a href="/auth">Опидореть</a></button></span>
+      <% } %>
+    </div>
+  </div>
+
+  <button class="header__button"><a href="/items/create">Создать гей тусу</a></button>
+
+  <button class="header__button"><a href="/categorie/store">Создать лесбитусу</a></button>
+
+  <form class="header__search" action="/search" method="post">
+
+    <input class="header__search" name="title" type="text" placeholder="Поиск..." required>
+
+    <input type="submit" value="Поиск">
+
+  </form>
+
+  <div class="rightSide">
+    <button class="header__buttonUsers"><a href="/users">Пользователи</a></button>
+
+    <div class="header_buttonRL1">
+      <button class="header__buttonLog"><a href="/logout">Выйти</a></button>
+    </div>
+  </div>
+
+  <% }else if(auth){ %>
+  <div class="dropdown hidden">
+    <span class="dropdownName">Меню</span>
+    <div class="dropdown-content">
+      <span class="menu-item"><a href="/items/create">Создать игру</a></span>
+      <% if (auth) { %>
+      <span class="menu-item"><button><a href="/logout">Выйти</a></button></span>
+      <% }else { %>
+      <span class="menu-item"><button><a href="/auth">Войти</a></button></span>
+      <% } %>
+    </div>
+  </div>
+
+  <button class="header__button"><a href="/items/create">Создать игру</a></button>
+
+  <form class="header__search" action="/search" method="post">
+    <input class="header__search" name="title" type="text" placeholder="Поиск..." required>
+
+    <input type="submit" value="Поиск" >
+  </form>
+
+  <div class="header_buttonRL2">
+    <button class="header__buttonLog"><a href="/logout">Выйти</a></button>
+  </div>
+  <% }else{ %>
+  <div class="dropdown hidden">
+    <span class="dropdownName">Меню</span>
+    <div class="dropdown-content">
+      <% if (auth) { %>
+      <span class="menu-item"><button><a href="/logout">Выйти</a></button></span>
+      <% }else { %>
+      <span class="menu-item"><button><a href="/auth">Войти</a></button></span>
+      <% } %>
+    </div>
+  </div>
+
+
+  <form class="header__search" action="/search" method="post">
+    <input class="header__search" name="title" type="text" placeholder="Поиск..." required>
+
+    <input type="submit" value="Поиск" >
+  </form>
+
+  <div class="header_buttonRL2">
+    <button class="header__buttonLog"><a href="/auth">Войти</a></button>
+  </div>
+  <% } %>
+
+
+
+</div>

@@ -1,0 +1,22 @@
+<%- include('./particles/header.ejs') %>
+
+<%- include('./particles/navigation.ejs') %>
+<div class="content">
+    <% for(let i = 0; i < users.length; i++) {%>
+        <div class="userView">
+            <span class="fa fa-user-o" aria-hidden="true"></span>
+                <div class="userView">
+                    Ник:<%= users[i].name %>
+                </div>
+                <div class="userView" type="password">
+                    <a href="/users/<%= users[i].id %>/delete"><button class="deleteUser">Delete</button></a>
+                    Пароль:<%= users[i].password %>
+                    
+                </div>
+            </div>
+                <% }%>
+
+
+
+
+<%- include('./particles/footer.ejs') %>
