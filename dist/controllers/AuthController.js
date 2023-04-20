@@ -24,7 +24,7 @@ class AuthController {
     //REGISTER
     register(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { name, password } = req.body;
+            const { name, password, email } = req.body;
             const users = yield prisma.users.findMany({
                 where: {
                     name
@@ -39,7 +39,8 @@ class AuthController {
                 yield prisma.users.create({
                     data: {
                         name: name,
-                        password: password
+                        email: email,
+                        password: password,
                     }
                 });
                 req.session.name = name;
@@ -63,10 +64,11 @@ class AuthController {
     // LOGIN
     login(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { name, password } = req.body;
+            const { name, password, email } = req.body;
             const users = yield prisma.users.findMany({
                 where: {
                     name,
+                    email,
                     password
                 }
             });

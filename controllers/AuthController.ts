@@ -15,7 +15,7 @@ export class AuthController {
     }
 //REGISTER
     async register(req: Request, res: Response) {
-        const { name, password } = req.body;
+        const { name, password, email } = req.body;
 
         const users = await prisma.users.findMany({
             where: {
@@ -33,7 +33,8 @@ export class AuthController {
             await prisma.users.create({
                 data: {
                     name: name,
-                    password: password
+                    email:email,
+                    password: password,
                 }
             });
             req.session.name = name;
@@ -60,10 +61,11 @@ export class AuthController {
     }
 // LOGIN
     async login(req: Request, res: Response) {
-        const { name, password } = req.body;
+        const { name, password,email } = req.body;
         const users = await prisma.users.findMany({
             where: {
                 name,
+                email,
                 password
 
             }
